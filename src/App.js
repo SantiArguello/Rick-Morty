@@ -8,6 +8,7 @@ function App () {
   return (
     <div className='App' style={{ padding: '25px' }}>
       <div>
+       <img class="Title" src="https://1000marcas.net/wp-content/uploads/2022/04/Rick-and-Morty.png"  />
         <Card
           name={Rick.name}
           species={Rick.species}
@@ -15,11 +16,13 @@ function App () {
           image={Rick.image}
           onClose={() => window.alert('Emulamos que se cierra la card')}
         />
+         
       </div>
       <hr />
       <div>
         <Cards
           characters={characters}
+          onClose={() => window.alert('Emulamos que se cierra la card')}
         />
       </div>
       <hr />

@@ -8,4 +8,20 @@ body{
    background-attachment: fixed;
    background-size: cover;
    background-color: #999;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.H1{
+   font-size: 70px;
+  
+}
+.Title{
+   width: 50rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-left: 150px;
+   margin-top: -60px;
 }

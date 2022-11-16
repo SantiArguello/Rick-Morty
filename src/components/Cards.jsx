@@ -1,3 +1,4 @@
+import React from "react";
 import Card from "./Card";
 
 
@@ -11,8 +12,10 @@ export default function Cards(props) {
             species={e.species}
             gender={e.gender}
             image={e.image}
+            onClose={props.onClose}
             key={e.name}
                />)}
 
    </div>;
 }
+
