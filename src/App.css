@@ -1,3 +1,11 @@
 .App {
    text-align: center;
+   
+}
+body{
+   background-image:url(https://www.itl.cat/pngfile/big/9-94735_rick-and-morty-desktop-wallpapers-1920x1080-rick-and.jpg);
+   background-position: center center; 
+   background-attachment: fixed;
+   background-size: cover;
+   background-color: #999;
 }
