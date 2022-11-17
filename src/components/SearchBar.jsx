@@ -8,7 +8,7 @@ export default function SearchBar(props) {
    return (
       <div className={s.Barra}>
          <input className={s.Input}  type='search' />
-      <button className={s.Button} onClick={ props.onSearch }><span className={s.Span}>Agregar</span></button>
+      <button className={s.Button} onClick={ props.onSearch }><span className={s.Span}>AGREGAR</span></button>
       </div>
    );
 }
