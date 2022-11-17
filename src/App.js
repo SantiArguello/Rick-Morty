@@ -8,7 +8,7 @@ function App () {
   return (
     <div className='App' style={{ padding: '25px' }}>
       <div>
-       <img class="Title" src="https://1000marcas.net/wp-content/uploads/2022/04/Rick-and-Morty.png"  />
+       <img className="Title" src="https://1000marcas.net/wp-content/uploads/2022/04/Rick-and-Morty.png"  />
         <Card
           name={Rick.name}
           species={Rick.species}

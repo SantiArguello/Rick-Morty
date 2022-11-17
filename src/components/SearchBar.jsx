@@ -6,9 +6,9 @@ import s from "./searchBar.module.css"
 
 export default function SearchBar(props) {
    return (
-      <div class={s.Barra}>
+      <div className={s.Barra}>
          <input className={s.Input}  type='search' />
-      <button className={s.Button} onClick={ props.onSearch }><span class={s.Span}>Agregar</span></button>
+      <button className={s.Button} onClick={ props.onSearch }><span className={s.Span}>Agregar</span></button>
       </div>
    );
 }
