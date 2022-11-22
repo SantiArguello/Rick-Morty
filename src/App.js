@@ -6,7 +6,14 @@ import { useState } from "react";
 function App() {
   const [characters, setCharacters] = useState([]);
   
-
+  const noRepeat = (data) => {
+    for (let char of characters) {
+      if (char.name === data.name) {
+        return true;
+    }
+    }
+    return false
+}
 
   const onClose = (id) => {
     setCharacters(characters.filter((char) => char.id !== id));
@@ -16,12 +23,16 @@ function App() {
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
       .then((response) => response.json())
       .then((data) => {
-        if (data.name) {
-          setCharacters((oldChars) => [...oldChars, data]);
+        if (noRepeat(data)) {
+          return window.alert("El personaje ya existe")
         } else {
-          window.alert("No hay personajes con ese ID");
+          if (data.name) {
+            setCharacters((oldChars) => [...oldChars, data]);
+          } else {
+            window.alert("No hay personajes con ese ID");
+          }
         }
-      });
+     });
   }
 
   return (
