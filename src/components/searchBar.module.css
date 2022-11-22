@@ -130,3 +130,28 @@
    .Span{
     font-weight: bold;
    }
+
+
+   @media screen and (max-width: 500px ){
+    .Barra{
+      display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    }
+    .Input{
+      border-radius: 20px;
+      margin: 8px;
+    }
+    .Button{
+      border-radius: 20px;
+      margin: 8px;
+    }
+    .Button2{
+      border-radius: 20px;
+      margin: 8px;
+    }
+
+   }

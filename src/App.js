@@ -5,6 +5,8 @@ import { useState } from "react";
 
 function App() {
   const [characters, setCharacters] = useState([]);
+  
+
 
   const onClose = (id) => {
     setCharacters(characters.filter((char) => char.id !== id));

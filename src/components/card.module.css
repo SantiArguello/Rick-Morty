@@ -76,3 +76,15 @@
    .Span{
     font-weight: bold;
    }
+
+   @media screen and (max-width: 500px ){
+    .Carta{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px ;
+    }
+   }

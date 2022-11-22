@@ -13,14 +13,17 @@ body{
    align-items: center;
 }
 
-.H1{
-   font-size: 70px;
-  
-}
+
 .Title{
    width: 50rem;
    align-items: center;
    justify-content: center;
    margin-left: 70px;
    margin-top: -60px;
+}
+@media screen and (max-width: 500px ){
+ .Title{
+   width:19rem ;
+   margin-right:70px ;
+ }
 }
