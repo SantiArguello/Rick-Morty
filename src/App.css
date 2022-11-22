@@ -22,8 +22,9 @@ body{
    margin-top: -60px;
 }
 @media screen and (max-width: 500px ){
+  
  .Title{
-   width:19rem ;
-   margin-right:70px ;
- }
+   width:26rem ;
+  
+ } 
 }
