@@ -1,54 +1,31 @@
 import "./App.css";
 import Cards from "./components/Cards.jsx";
-import Nav from "./components/Nav.jsx";
+import BarraSup from "./components/NavSup/BarraSup.jsx";
+import About from "./components/About/About.jsx";
+import Detail from "./components/Detail/Detail.jsx";
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   const [characters, setCharacters] = useState([]);
-  
-  const noRepeat = (data) => {
-    for (let char of characters) {
-      if (char.name === data.name) {
-        return true;
-    }
-    }
-    return false
-}
 
   const onClose = (id) => {
     setCharacters(characters.filter((char) => char.id !== id));
   };
 
-  function onSearch(character) {
-    fetch(`https://rickandmortyapi.com/api/character/${character}`)
-      .then((response) => response.json())
-      .then((data) => {
-        if (noRepeat(data)) {
-          return window.alert("El personaje ya existe")
-        } else {
-          if (data.name) {
-            setCharacters((oldChars) => [...oldChars, data]);
-          } else {
-            window.alert("No hay personajes con ese ID");
-          }
-        }
-     });
-  }
-
   return (
     <div className="App" style={{ padding: "25px" }}>
-      <img
-        className="Title"
-        src="https://1000marcas.net/wp-content/uploads/2022/04/Rick-and-Morty.png"
-        alt=""
-      />
       <div>
-        <Nav onSearch={onSearch} />
+        <BarraSup />
       </div>
-
-      <div>
-        <Cards characters={characters} onClose={onClose} />
-      </div>
+      <Routes>
+        <Route
+          path="/"
+          element={<Cards characters={characters} onClose={onClose} />}
+        />
+        <Route path="/about" element={<About />} />
+        <Route path="/detail/:id" element={<Detail />} />
+      </Routes>
     </div>
   );
 }
