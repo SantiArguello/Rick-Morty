@@ -11,10 +11,12 @@ export default function Card(props) {
         </button>
       </NavLink>
 
+      <div className={s.divImg}>
       <img className={s.Img} src={props.image} alt={props.name} />
+      </div>
 
-      <h2>{props.species}</h2>
-      <h2>{props.gender}</h2>
+      {/* <h2>{props.species}</h2>
+      <h2>{props.gender}</h2> */}
       <button className={s.btn} onClick={() => props.onClose(props.id)}>
         <span className={s.Span}>CERRAR</span>
       </button>
