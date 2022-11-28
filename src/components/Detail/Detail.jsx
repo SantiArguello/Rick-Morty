@@ -48,7 +48,7 @@ export default function Detail() {
                     
                     
             <div className={s.barraBoton} >
-                        <button className={s.botonDetalle} onClick={() => { navigate("/") }}>
+                        <button className={s.botonDetalle} onClick={() => { navigate("/home") }}>
                             <span className={s.spanDetalle}>
                                 VOLVER
                                 </span>
