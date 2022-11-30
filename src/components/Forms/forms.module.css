@@ -1,9 +1,9 @@
-.divForms{
-    margin-left: auto;
-    margin-right: auto;
-    border: solid black;
-    border-radius: 30px;
-    background-image: linear-gradient(
+.divForms {
+  margin-left: auto;
+  margin-right: auto;
+  border: solid black;
+  border-radius: 30px;
+  background-image: linear-gradient(
     to left,
     #6200ffb9,
     #7c68eeb9,
@@ -15,144 +15,139 @@
 }
 
 .warning {
-    border: solid red 1px;
-    border-radius: 0.2em;
-  }
-  
-  .danger {
-    font-weight: bold;
-    font-size: 16px;
-    color: red;
-    margin-left: 10em;
-  }
+  border: solid red 1px;
+  border-radius: 0.2em;
+}
 
+.danger {
+  font-weight: bold;
+  font-size: 16px;
+  color: red;
+  margin-left: 10em;
+}
 
-#inputUser{
-    margin-top: 3rem;
-    min-height: 45px;
-    max-width: 15em;
-    padding: 0 1rem;
-    color: #fff;
-    font-size: 15px;
-    border-bottom-right-radius: 30px;
-    border-top-right-radius: 30px;
-    background-color: #000000c9;
-    border-width: 2px;
-    border-style:ridge;
-    border-color: -internal-light-dark(rgb(10, 3, 3), rgb(9, 3, 3));
-    border-image: initial;
+#inputUser {
+  margin-top: 3rem;
+  min-height: 45px;
+  max-width: 15em;
+  padding: 0 1rem;
+  color: #fff;
+  font-size: 15px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: #000000c9;
+  border-width: 2px;
+  border-style: ridge;
+  border-color: -internal-light-dark(rgb(10, 3, 3), rgb(9, 3, 3));
+  border-image: initial;
 }
 #inputUser:focus {
   outline-color: rgb(0, 255, 60);
   box-shadow: -3px -3px 15px rgb(0, 255, 51);
 }
 
-.labelUser{
-    width: 20rem;
-    padding: 13.5px;
-    color: #fff;
-    font-size: 15px;
-   border: solid 1px black;
-    border-bottom-left-radius: 30px;
-    border-top-left-radius: 30px;
-    background-color: #000000c9;
+.labelUser {
+  width: 20rem;
+  padding: 13.5px;
+  color: #fff;
+  font-size: 15px;
+  border: solid 1px black;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  background-color: #000000c9;
 }
 
+.labelPass {
+  width: 20rem;
+  padding: 13.5px;
+  color: rgb(252, 252, 252);
+  font-size: 15px;
 
-.labelPass{
-    width: 20rem;
-    padding: 13.5px;
-    color: rgb(252, 252, 252);
-    font-size: 15px;
-  
-    border-bottom-left-radius: 30px;
-    border-top-left-radius: 30px;
-    background-color: #000000c9;
-    border-width: 0.1px;
-    border-style: ridge;
-   border-color: black;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  background-color: #000000c9;
+  border-width: 0.1px;
+  border-style: ridge;
+  border-color: black;
 }
 
-#inputPass{
-  
-    min-height: 45px;
-    max-width: 15em;
-    padding: 0 1rem;
-    color: #fff;
-    font-size: 15px;
-    border-bottom-right-radius: 30px;
-    border-top-right-radius: 30px;
-    background-color: #000000c9;
-    border-width: 2px;
-    border-style:ridge;
-    border-color: -internal-light-dark(rgb(10, 3, 3), rgb(9, 3, 3));
-    border-image: initial;
+#inputPass {
+  min-height: 45px;
+  max-width: 15em;
+  padding: 0 1rem;
+  color: #fff;
+  font-size: 15px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: #000000c9;
+  border-width: 2px;
+  border-style: ridge;
+  border-color: -internal-light-dark(rgb(10, 3, 3), rgb(9, 3, 3));
+  border-image: initial;
 }
 #inputPass:focus {
   outline-color: rgb(0, 255, 60);
   box-shadow: -3px -3px 15px rgb(0, 255, 51);
 }
 
-
 .botonForms {
-    text-decoration: none;
-    
-    border: none;
-    font-size: 15px;
-    font-family: inherit;
-    color: rgb(0, 0, 0);
-    width: 15em;
-    height: 2.8em;
-    line-height: 2em;
-    text-align: center;
-    background: linear-gradient(90deg, #b73bff, #03a9f4, #b73bff, #03a9f4);
-    background-size: 300%;
-    z-index: 1;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    cursor: pointer;
-    border-radius: 50px;
-    
-  }
-  
-  .botonForms:hover {
-    animation: ani 8s linear infinite;
-    border: none;
-    border: 3px solid black;
-  }
-  
-  @keyframes ani {
-    0% {
-      background-position: 0%;
-    }
-  
-    100% {
-      background-position: 400%;
-    }
-  }
-  
-  .botonForms:before {
-    content: "";
-    position: 0;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    background: linear-gradient(90deg, #b73bff, #03a9f4, #b73bff, #03a9f4);
-    background-size: 400%;
-    border-radius: 35px;
-    transition: 1s;
-  }
-  
-  .botonForms:hover::before {
-    filter: blur(20px);
-  }
-  
-  .botonForms:active {
-    background: linear-gradient(32deg, #b73bff, #03a9f4, #b73bff, #03a9f4);
+  text-decoration: none;
+
+  border: none;
+  font-size: 15px;
+  font-family: inherit;
+  color: rgb(0, 0, 0);
+  width: 15em;
+  height: 2.8em;
+  line-height: 2em;
+  text-align: center;
+  background: linear-gradient(90deg, #b73bff, #03a9f4, #b73bff, #03a9f4);
+  background-size: 300%;
+  z-index: 1;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.botonForms:hover {
+  animation: ani 8s linear infinite;
+  border: none;
+  border: 3px solid black;
+}
+
+@keyframes ani {
+  0% {
+    background-position: 0%;
   }
 
-  .spanForms{
-    font-weight: bold;
+  100% {
+    background-position: 400%;
   }
+}
+
+.botonForms:before {
+  content: "";
+  position: 0;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #b73bff, #03a9f4, #b73bff, #03a9f4);
+  background-size: 400%;
+  border-radius: 35px;
+  transition: 1s;
+}
+
+.botonForms:hover::before {
+  filter: blur(20px);
+}
+
+.botonForms:active {
+  background: linear-gradient(32deg, #b73bff, #03a9f4, #b73bff, #03a9f4);
+}
+
+.spanForms {
+  font-weight: bold;
+}
