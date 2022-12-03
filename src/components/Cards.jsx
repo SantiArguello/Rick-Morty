@@ -13,7 +13,7 @@ export default function Cards(props) {
       if (char.name === data.name) {
         return true;
       }
-    }
+    }  
     return false;
   };
 

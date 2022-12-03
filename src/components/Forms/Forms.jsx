@@ -25,8 +25,11 @@ export default function Forms(props) {
     props.login(userData);
   };
 
+  
+  
   return (
-    <div>
+   
+    <div >
       <div>
         <img
           className="Title"
@@ -68,6 +71,7 @@ export default function Forms(props) {
         <p>* Usuario : saanti_arguello@hotmail.com * </p>
         <p>* Constraseña : Rickmorty1 * </p>
       </div>
-    </div>
+      </div>
+      
   );
 }

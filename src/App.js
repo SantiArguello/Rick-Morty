@@ -33,6 +33,7 @@ function App() {
   return (
     <div className="App" style={{ padding: "25px" }}>
       <div>{location.pathname !== "/" && <BarraSup />}</div>
+
       <Routes>
         <Route path="/" element={<Forms login={login} />} />
         <Route

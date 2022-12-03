@@ -15,12 +15,12 @@ body{
 
 
 .Title{
-   
    width: 45rem;
    align-items: center;
    justify-content: center;
    margin-left: 70px;
    margin-top: -60px;
+   
 }
 
 @media screen and (max-width: 500px ){
