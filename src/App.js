@@ -4,6 +4,7 @@ import BarraSup from "./components/NavSup/BarraSup.jsx";
 import About from "./components/About/About.jsx";
 import Detail from "./components/Detail/Detail.jsx";
 import Forms from "./components/Forms/Forms.jsx";
+import Favorites from "./components/Favorites/Favorites.jsx" 
 import { useState, useEffect } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 
@@ -24,10 +25,36 @@ function App() {
 
   useEffect(() => {
     !access && navigate("/");
-  }, [access]);
+  }, [access, navigate]);
 
   const onClose = (id) => {
     setCharacters(characters.filter((char) => char.id !== id));
+  };
+
+
+  function onSearch(character) {
+    fetch(`https://rickandmortyapi.com/api/character/${character}`)
+      .then((response) => response.json())
+      .then((data) => {
+        if (noRepeat(data)) {
+          return window.alert("El personaje ya existe");
+        } else {
+          if (data.name) {
+            setCharacters((oldChars) => [...oldChars, data]);
+          } else {
+            window.alert("No hay personajes con ese ID");
+          }
+        }
+      });
+  }
+
+  const noRepeat = (data) => {
+    for (let char of characters) {
+      if (char.name === data.name) {
+        return true;
+      }
+    }  
+    return false;
   };
 
   return (
@@ -38,10 +65,11 @@ function App() {
         <Route path="/" element={<Forms login={login} />} />
         <Route
           path="/home"
-          element={<Cards characters={characters} onClose={onClose} />}
+          element={<Cards characters={characters} onSearch={onSearch} onClose={onClose} />}
         />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
     </div>
   );

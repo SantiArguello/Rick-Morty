@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import s from "./searchBar.module.css";
+import { NavLink } from "react-router-dom";
 
 export default function SearchBar(props) {
   const [id, setId] = useState("");
@@ -27,6 +28,15 @@ export default function SearchBar(props) {
       >
         <span className={s.Span}>CUALQUIERA</span>
       </button>
+
+      <NavLink to={"/favorites"}>
+        <button>
+          <span>
+            FAVORITOS ❤️
+          </span>
+         </button>
+     </NavLink>
+
     </div>
   );
 }
