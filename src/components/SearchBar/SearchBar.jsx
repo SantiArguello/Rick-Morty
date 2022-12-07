@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import s from "./searchBar.module.css";
 import { NavLink } from "react-router-dom";
 
+
 export default function SearchBar(props) {
   const [id, setId] = useState("");
 
@@ -30,8 +31,8 @@ export default function SearchBar(props) {
       </button>
 
       <NavLink to={"/favorites"}>
-        <button>
-          <span>
+        <button className={s.buttonFav}>
+          <span className={s.spanFav}>
             FAVORITOS ❤️
           </span>
          </button>

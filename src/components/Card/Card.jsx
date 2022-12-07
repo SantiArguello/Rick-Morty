@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./card.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink,useLocation } from "react-router-dom";
 import { connect } from "react-redux";
 import { addFavorites, deleteFavorites } from "../../redux/actions";
 import { useState, useEffect } from "react";
@@ -28,11 +28,18 @@ const [isFav, setIsFav]= useState(false)
   
   return (
     <div className={s.Carta}>
-      <NavLink to={`/detail/${props.id}`}>
-        <button className={s.cardBoton}>
-          <span className={s.cardSpan}>{props.name}</span>
-        </button>
-      </NavLink>
+        {useLocation().pathname !== '/favorites' && <button className={s.btn} onClick={() => props.onClose(props.id)}>
+          <span className={s.Span}>CERRAR</span>
+        </button> }
+
+      <div className={s.corazonFav}>
+      {isFav ? (
+        <button className={s.corazon} onClick={handleFavorite}>❤️</button>
+      ) : (
+        <button className={s.corazon} onClick={handleFavorite}>🤍</button>
+      )}
+      </div>
+
 
       <div className={s.divImg}>
       <img className={s.Img} src={props.image} alt={props.name} />
@@ -41,16 +48,12 @@ const [isFav, setIsFav]= useState(false)
       {/* <h2>{props.species}</h2>
       <h2>{props.gender}</h2> */}
 
-      {isFav ? (
-        <button onClick={handleFavorite}>❤️</button>
-      ) : (
-        <button onClick={handleFavorite}>🤍</button>
-      )}
+      <NavLink className={s.navLink} to={`/detail/${props.id}`}>
+        <button className={s.cardBoton}>
+          <span className={s.cardSpan}>{props.name}</span>
+        </button>
+      </NavLink>
       
-
-      <button className={s.btn} onClick={() => props.onClose(props.id)}>
-        <span className={s.Span}>CERRAR</span>
-      </button>
     </div>
   );
 }

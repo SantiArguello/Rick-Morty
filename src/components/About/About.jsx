@@ -15,7 +15,7 @@ export default function About(props) {
       
       <h1 className={s.aboutH1}>Nosotros</h1>
       <p className={s.aboutP}>Mi nombre es <a className={s.aboutA} href="https://www.instagram.com/saanti_arguello/" rel="yo">Santiago Arguello</a> , autor de la Pag en la cual nos encontramos. Este es mi primer proyecto, el cual realicé para el BootCamp Soyhenry en el módulo de FrontEnd.</p>
-      <p className={s.aboutP}>Mencionando y agradeciendo a nuestro equipo de trabajo los cuales pueden encontrar grandes proyectos también en ellos. <a className={s.aboutA} href="https://www.instagram.com/agustinpetrini/" rel="Agustin">Agustin Petrini</a> , <a className={s.aboutA} href="https://www.instagram.com/jonathanmolero/" rel="Jhona">Johnatan Molero</a> y <a className={s.aboutA} href="https://www.instagram.com/jhontattoo/" rel="Jhona">Jhon Ruiz</a> </p>
+      <p className={s.aboutP}>Mencionando y agradeciendo a nuestro equipo de trabajo los cuales pueden encontrar grandes proyectos también en ellos. <a className={s.aboutA} href="https://www.instagram.com/agustinpetrini/" rel="Agustin">Agustin Petrini</a> , <a className={s.aboutA} href="https://www.instagram.com/jonathanmolero/" rel="Jhona">Jonathan Molero</a> y <a className={s.aboutA} href="https://www.instagram.com/jhontattoo/" rel="Jhona">Jhon Ruiz</a> </p>
        <div className={s.aboutBarra} >
       <button className={s.aboutButton} onClick={() => {
               navigate("/home");

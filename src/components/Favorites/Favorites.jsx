@@ -1,6 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
-import  Card  from "../Card/Card.jsx"
+import Card from "../Card/Card.jsx"
+
 
 const Favorites = (props) => {
     console.log(props.myFavorites)
@@ -13,6 +14,7 @@ const Favorites = (props) => {
                 gender={fav.gender}
                 image={fav.image}
                 key={fav.id}
+                
         />))}
             
 </div>
