@@ -39,16 +39,12 @@ export default function rootReducer(state = initialState, action) {
 
     case ORDER:
       const copyCharacter = [...state.myFavorites];
-     
-        if (action.payload === "Ascendente") {
+      if (action.payload === "Ascendente") {
           copyCharacter.sort((a, b) => a.id - b.id);
         } else {
           copyCharacter.sort((a, b) => b.id - a.id);
         }
       
-
-
-      console.log(copyCharacter)
       return {
         ...state,
         myFavorites: copyCharacter,

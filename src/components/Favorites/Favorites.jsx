@@ -19,10 +19,10 @@ const Favorites = (props) => {
     
               <select className={s.select1} onChange={(e) => dispatch(filterCards(e.target.value))} >
               <option className={s.option} value="ALL">Todos</option>
-              <option className={s.option} value="Male">Male</option>
-              <option className={s.option} value="Female">Female</option>
-              <option className={s.option} value="Genderless">Genderless</option>
-              <option className={s.option} value="unknown">unknown</option>
+              <option className={s.option} value="Male">Masculino</option>
+              <option className={s.option} value="Female">Femenino</option>
+              <option className={s.option} value="Genderless">Sin Genero</option>
+              <option className={s.option} value="unknown">Desconocido</option>
             </select>
           </div>
 

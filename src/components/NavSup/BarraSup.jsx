@@ -16,7 +16,7 @@ export default function BarraSup(props) {
 
         <NavLink to={"/home"}>
           <button className={s.botonSup2}>
-            <span className={s.spanSup2}>HOME</span>
+            <span className={s.spanSup2}>INICIO</span>
           </button>
         </NavLink>
       </nav>

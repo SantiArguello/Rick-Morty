@@ -40,7 +40,7 @@ export default function Forms(props) {
 
       <div className={s.divForms}>
         <form onSubmit={handleSubmit}>
-          <label className={s.labelUser}>Username </label>
+          <label className={s.labelUser}>Usuario </label>
           <input
             placeholder="Escribe tu Email"
             type="text"
@@ -52,7 +52,7 @@ export default function Forms(props) {
           />
           <p className={s.danger}>{errors.username}</p>
 
-          <label className={s.labelPass}>Password </label>
+          <label className={s.labelPass}>Contraseña </label>
           <input
             placeholder="Escribe tu contraseña"
             type="password"
@@ -65,7 +65,7 @@ export default function Forms(props) {
           <p className={s.danger}>{errors.password}</p>
 
           <button className={s.botonForms} type="submit">
-            <span className={s.spanForms}>LOGIN</span>
+            <span className={s.spanForms}>INGRESAR</span>
           </button>
         </form>
         <p>* Usuario : saanti_arguello@hotmail.com * </p>
