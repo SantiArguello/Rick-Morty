@@ -38,10 +38,10 @@ export default function Detail() {
         <div>
           <img className={s.imgDetalle} src={character.image} alt="" />
         </div>
-        <h2>Estado: {character.status}</h2>
-        <h2>Especie: {character.species}</h2>
-        <h2>Genero: {character.gender}</h2>
-        <h2>Origen: {character.origin.name}</h2>
+        <h2>Status: {character.status}</h2>
+        <h2>Specie: {character.species}</h2>
+        <h2>Gender: {character.gender}</h2>
+        <h2>Origin: {character.origin.name}</h2>
 
         <div className={s.barraBoton}>
           <button
